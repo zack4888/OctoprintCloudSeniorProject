@@ -70,7 +70,7 @@ class MqttPlugin(octoprint.plugin.SettingsPlugin,
 
     def get_template_configs(self):
         return [
-            dict(type="settings", name="MQTT")
+            dict(type="settings", name="Octoprint_Cloud")
         ]
 
     ##~~ AssetPlugin API
