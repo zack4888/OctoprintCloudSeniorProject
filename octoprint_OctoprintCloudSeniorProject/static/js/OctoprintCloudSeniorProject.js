@@ -8,22 +8,31 @@ $(function() {
     function OctoprintcloudseniorprojectViewModel(parameters) {
         var self = this;
 
-        // assign the injected parameters, e.g.:
-        // self.loginStateViewModel = parameters[0];
-        // self.settingsViewModel = parameters[1];
+        var self = this;
 
-        // TODO: Implement your plugin's view model here.
+        self.global_settings = parameters[0];
+
+        self.showUserCredentials = ko.observable(false);
+        self.showClientID = ko.observable(false);
+
+        self.settings = undefined;
+        self.availableProtocols = ko.observableArray(['MQTTv31','MQTTv311']);
+
+        self.onBeforeBinding = function () {
+            self.settings = self.global_settings.settings.plugins.mqtt;
+
+            // show credential options if username is set
+            self.showUserCredentials(!!self.settings.broker.username());
+
+            // show client_id options if client_id is set
+            self.showClientID(!!self.settings.client.client_id());
+        };
     }
 
-    /* view model class, parameters for constructor, container to bind to
-     * Please see http://docs.octoprint.org/en/master/plugins/viewmodels.html#registering-custom-viewmodels for more details
-     * and a full list of the available options.
-     */
-    OCTOPRINT_VIEWMODELS.push({
-        construct: OctoprintcloudseniorprojectViewModel,
-        // ViewModels your plugin depends on, e.g. loginStateViewModel, settingsViewModel, ...
-        dependencies: [ /* "loginStateViewModel", "settingsViewModel" */ ],
-        // Elements to bind to, e.g. #settings_plugin_OctoprintCloudSeniorProject, #tab_plugin_OctoprintCloudSeniorProject, ...
-        elements: [ /* ... */ ]
-    });
+    
+    ADDITIONAL_VIEWMODELS.push([
+        MQTTViewModel,
+        ["settingsViewModel"],
+        ["#settings_plugin_mqtt"]
+    ]);
 });
