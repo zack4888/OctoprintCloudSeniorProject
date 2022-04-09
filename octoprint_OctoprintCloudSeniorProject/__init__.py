@@ -298,7 +298,7 @@ class MqttPlugin(octoprint.plugin.SettingsPlugin,
                 current=self._plugin_version,
 
                 # update method: pip
-                pip="https://github.com/OctoPrint/OctoPrint-MQTT/archive/{target_version}.zip"
+                pip="https://github.com/zack4888/OctoprintCloudSeniorProject/archive/master.zip"
             )
         )
 
