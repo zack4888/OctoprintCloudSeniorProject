@@ -27,7 +27,7 @@ plugin_author = "zack"
 plugin_author_email = "redzacr@dunwoody.edu"
 
 # The plugin's homepage URL. Can be overwritten within OctoPrint's internal data via __plugin_url__ in the plugin module
-plugin_url = "https://github.com/zack4888/https://github.com/zack4888/OctoprintCloudSeniorProject"
+plugin_url = "https://github.com/zack4888/OctoprintCloudSeniorProject/archive/master.zip"
 
 # The plugin's license. Can be overwritten within OctoPrint's internal data via __plugin_license__ in the plugin module
 plugin_license = "AGPLv3"
