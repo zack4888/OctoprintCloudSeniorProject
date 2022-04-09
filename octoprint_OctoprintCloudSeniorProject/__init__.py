@@ -538,7 +538,7 @@ class MqttPlugin(octoprint.plugin.SettingsPlugin,
         return self._settings.get_boolean(["publish", "events", "unclassified"])
 
 
-__plugin_name__ = "MQTT"
+__plugin_name__ = "OctoPrint_Cloud"
 __plugin_pythoncompat__ = ">=2.7,<4"
 
 def __plugin_load__():
