@@ -1,13 +1,5 @@
-/*
- * View model for OctoprintCloudSeniorProject
- *
- * Author: zack
- * License: AGPLv3
- */
 $(function() {
     function OctoprintcloudseniorprojectViewModel(parameters) {
-        var self = this;
-
         var self = this;
 
         self.global_settings = parameters[0];
@@ -28,7 +20,6 @@ $(function() {
             self.showClientID(!!self.settings.client.client_id());
         };
     }
-
     
     ADDITIONAL_VIEWMODELS.push([
         MQTTViewModel,
