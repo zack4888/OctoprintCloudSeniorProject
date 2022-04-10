@@ -1,5 +1,5 @@
 $(function() {
-    function OctoprintcloudseniorprojectViewModel(parameters) {
+    function OctoprintCloudSeniorProjectViewModel(parameters) {
         var self = this;
 
         self.global_settings = parameters[0];
@@ -11,7 +11,7 @@ $(function() {
         self.availableProtocols = ko.observableArray(['MQTTv31','MQTTv311']);
 
         self.onBeforeBinding = function () {
-            self.settings = self.global_settings.settings.plugins.mqtt;
+            self.settings = self.global_settings.settings.plugins.OctoprintCloudSeniorProject;
 
             // show credential options if username is set
             self.showUserCredentials(!!self.settings.broker.username());
@@ -22,8 +22,8 @@ $(function() {
     }
     
     ADDITIONAL_VIEWMODELS.push([
-        MQTTViewModel,
+        OctoprintCloudSeniorProjectViewModel,
         ["settingsViewModel"],
-        ["#settings_plugin_mqtt"]
+        ["#settings_plugin_OctoprintCloudSeniorProject"]
     ]);
 });
