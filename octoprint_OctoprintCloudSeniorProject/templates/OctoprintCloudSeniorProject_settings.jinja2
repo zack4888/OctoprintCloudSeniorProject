@@ -2,8 +2,8 @@
     <ul class="nav nav-pills">
         <li class="active"><a href="#settings_plugin_OctoprintCloudSeniorProject_broker" data-toggle="tab">{{ _('Broker') }}</a></li>
         <li><a href="#settings_plugin_OctoprintCloudSeniorProject_topics" data-toggle="tab">{{ _('Topics') }}</a></li>
-        <li><a href="#settings_plugin_mqtt_lastwill" data-toggle="tab">{{ _('Status &amp; Last Will') }}</a></li>
-        <li><a href="#settings_plugin_mqtt_Subscription" data-toggle="tab">{{ _('Subscription') }}</a></li>
+        <li><a href="#settings_plugin_OctoprintCloudSeniorProject_lastwill" data-toggle="tab">{{ _('Status &amp; Last Will') }}</a></li>
+        <li><a href="#settings_plugin_OctoprintCloudSeniorProject_Subscription" data-toggle="tab">{{ _('Subscription') }}</a></li>
     </ul>
 
     <div class="tab-content">
@@ -11,7 +11,7 @@
             <div class="control-group">
                 <label class="control-label">{{ _('Host') }}</label>
                 <div class="controls">
-                    <input type="text" class="input-large" id="settings_plugin_mqtt_broker_url" data-bind="value: settings.broker.url" />
+                    <input type="text" class="input-large" id="settings_plugin_OctoprintCloudSeniorProject_broker_url" data-bind="value: settings.broker.url" />
                     <span class="help-block">{{ _('The broker\'s URL or IP. Mandatory, if not configured the plugin will do nothing.') }}</span>
                 </div>
             </div>
@@ -19,7 +19,7 @@
             <div class="control-group">
                 <label class="control-label">{{ _('Port') }}</label>
                 <div class="controls">
-                    <input type="number" class="input-mini text-right" id="settings_plugin_mqtt_broker_port" data-bind="value: settings.broker.port" />
+                    <input type="number" class="input-mini text-right" id="settings_plugin_OctoprintCloudSeniorProject_broker_port" data-bind="value: settings.broker.port" />
                     <span class="help-block">{{ _('The broker\'s port, defaults to 1883.') }}</span>
                 </div>
             </div>
@@ -27,7 +27,7 @@
             <div class="control-group">
                 <label class="control-label">{{ _('Protocol version') }}</label>
                 <div class="controls">
-                    <select class="input-medium" id="settings_plugin_mqtt_broker_protocol" data-bind="options: $root.availableProtocols, value: settings.broker.protocol"></select>
+                    <select class="input-medium" id="settings_plugin_OctoprintCloudSeniorProject_broker_protocol" data-bind="options: $root.availableProtocols, value: settings.broker.protocol"></select>
                     <span class="help-block">{{ _('Protocol version to use, defaults to <code>MQTTv31</code>.') }}</span>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                 <label class="control-label">{{ _('Keepalive') }}</label>
                 <div class="controls">
                     <div class="input-append">
-                        <input type="number" class="input-mini text-right" id="settings_plugin_mqtt_broker_keepalive" data-bind="value: settings.broker.keepalive" />
+                        <input type="number" class="input-mini text-right" id="settings_plugin_OctoprintCloudSeniorProject_broker_keepalive" data-bind="value: settings.broker.keepalive" />
                         <span class="add-on">sec</span>
                     </div>
                     <span class="help-block">{{ _('The keepalive value for the broker connection') }}</span>
@@ -91,7 +91,7 @@
                 <div class="control-group">
                     <label class="control-label">{{ _('Username') }}</label>
                     <div class="controls">
-                        <input type="text" class="input-large" id="settings_plugin_mqtt_broker_username" data-bind="value: settings.broker.username" />
+                        <input type="text" class="input-large" id="settings_plugin_OctoprintCloudSeniorProject_broker_username" data-bind="value: settings.broker.username" />
                         <span class="help-block">{{ _('The username to use to connect with the broker, if not set no user credentials will be sent') }}</span>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                 <div class="control-group">
                     <label class="control-label">{{ _('Password') }}</label>
                     <div class="controls">
-                        <input type="text" class="input-large" id="settings_plugin_mqtt_broker_password" data-bind="value: settings.broker.password" />
+                        <input type="text" class="input-large" id="settings_plugin_OctoprintCloudSeniorProject_broker_password" data-bind="value: settings.broker.password" />
                         <span class="help-block">{{ _('The password to use to connect with the broker, only used if a username is supplied too') }}</span>
                     </div>
                 </div>
@@ -119,7 +119,7 @@
                     <div class="control-group">
                         <label class="control-label">{{ _('Path to server certificate chain') }}</label>
                         <div class="controls">
-                            <input type="text" class="input-large" id="settings_plugin_mqtt_broker_tls_caCerts" data-bind="value: settings.broker.tls.ca_certs" />
+                            <input type="text" class="input-large" id="settings_plugin_OctoprintCloudSeniorProject_broker_tls_caCerts" data-bind="value: settings.broker.tls.ca_certs" />
                             <span class="help-block">{{ _('Path to the server\'s certificate chain file (optional).') }}</span>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
                     <div class="control-group">
                         <label class="control-label">{{ _('Path to client certificate') }}</label>
                         <div class="controls">
-                            <input type="text" class="input-large" id="settings_plugin_mqtt_broker_tls_certfile" data-bind="value: settings.broker.tls.certfile" />
+                            <input type="text" class="input-large" id="settings_plugin_OctoprintCloudSeniorProject_broker_tls_certfile" data-bind="value: settings.broker.tls.certfile" />
                             <span class="help-block">{{ _('Paths to the PEM encoded client certificate, <strong>must not be password protected</strong>, only necessary if broker requires client certificate authentication.') }}</span>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                     <div class="control-group">
                         <label class="control-label">{{ _('Path to client key') }}</label>
                         <div class="controls">
-                            <input type="text" class="input-large" id="settings_plugin_mqtt_broker_tls_keyfile" data-bind="value: settings.broker.tls.keyfile" />
+                            <input type="text" class="input-large" id="settings_plugin_OctoprintCloudSeniorProject_broker_tls_keyfile" data-bind="value: settings.broker.tls.keyfile" />
                             <span class="help-block">{{ _('Paths to the PEM encoded private keys, <strong>must not be password protected</strong>, only necessary if broker requires client certificate authentication.') }}</span>
                         </div>
                     </div>
@@ -143,7 +143,7 @@
                     <div class="control-group">
                         <label class="control-label">{{ _('Ciphers') }}</label>
                         <div class="controls">
-                            <input type="text" class="input-large" id="settings_plugin_mqtt_broker_tls_ciphers" data-bind="value: settings.broker.tls.ciphers" />
+                            <input type="text" class="input-large" id="settings_plugin_OctoprintCloudSeniorProject_broker_tls_ciphers" data-bind="value: settings.broker.tls.ciphers" />
                             <span class="help-block">{{ _('A string specifying which encryption ciphers are allowable for this connection. See <a href="%(url)s" target="_blank">the OpenSSL documentation on ciphers</a>.', url = "https://www.openssl.org/docs/manmaster/man1/ciphers.html") }}</span>
                         </div>
                     </div>
@@ -158,20 +158,20 @@
                 </div>
             </div>
         </div>
-        <div id="settings_plugin_mqtt_topics" class="tab-pane">
+        <div id="settings_plugin_OctoprintCloudSeniorProject_topics" class="tab-pane">
             <fieldset>
                 <legend>{{ _('General') }}</legend>
                 <div class="control-group">
                     <label class="control-label">{{ _('Base topic') }}</label>
                     <div class="controls">
-                        <input type="text" class="input-large" id="settings_plugin_mqtt_publish_baseTopic" data-bind="textInput: settings.publish.baseTopic" />
+                        <input type="text" class="input-large" id="settings_plugin_OctoprintCloudSeniorProject_publish_baseTopic" data-bind="textInput: settings.publish.baseTopic" />
                         <span class="help-block">{{ _('Base topic under which to publish OctoPrint\'s messages') }}</span>
                     </div>
                 </div>
                 <div class="control-group">
                     <label class="control-label">{{ _('Timestamp Field Name') }}</label>
                     <div class="controls">
-                        <input type="text" class="input-large" id="settings_plugin_mqtt_timestamp_fieldname" data-bind="textInput: settings.timestamp_fieldname" />
+                        <input type="text" class="input-large" id="settings_plugin_OctoprintCloudSeniorProject_timestamp_fieldname" data-bind="textInput: settings.timestamp_fieldname" />
                         <span class="help-block">{{ _('Field name to use when publishing timestamped messages.') }}</span>
                     </div>
                 </div>
@@ -191,7 +191,7 @@
                     <div class="controls">
                         <div class="input-prepend">
                             <span class="add-on" data-bind="text: settings.publish.baseTopic"></span>
-                            <input type="text" class="input-large" id="settings_plugin_mqtt_publish_eventTopic" data-bind="value: settings.publish.eventTopic" />
+                            <input type="text" class="input-large" id="settings_plugin_OctoprintCloudSeniorProject_publish_eventTopic" data-bind="value: settings.publish.eventTopic" />
                         </div>
                         <span class="help-block">{{ _('Topic for events, appended to the base topic, <code>{event}</code> will be substituted with the event name') }}</span>
                     </div>
@@ -259,7 +259,7 @@
                     <div class="controls">
                         <div class="input-prepend">
                             <span class="add-on" data-bind="text: settings.publish.baseTopic"></span>
-                            <input type="text" class="input-large" id="settings_plugin_mqtt_publish_progressTopic" data-bind="value: settings.publish.progressTopic" />
+                            <input type="text" class="input-large" id="settings_plugin_OctoprintCloudSeniorProject_publish_progressTopic" data-bind="value: settings.publish.progressTopic" />
                         </div>
                         <span class="help-block">{{ _('Topic for print and slicer progress, appended to the base topic, <code>{progress}</code> will be substituted with either <code>printing</code> or <code>slicing</code>') }}</span>
                     </div>
@@ -280,7 +280,7 @@
                     <div class="controls">
                         <div class="input-prepend">
                             <span class="add-on" data-bind="text: settings.publish.baseTopic"></span>
-                            <input type="text" class="input-large" id="settings_plugin_mqtt_publish_temperatureTopic" data-bind="value: settings.publish.temperatureTopic" />
+                            <input type="text" class="input-large" id="settings_plugin_OctoprintCloudSeniorProject_publish_temperatureTopic" data-bind="value: settings.publish.temperatureTopic" />
                         </div>
                         <span class="help-block">{{ _('Topic for temperatures, appended to the base topic, <code>{temp}</code> will be substituted with either <code>toolX</code> where X is the number of the tool or <code>bed</code>') }}</span>
                     </div>
@@ -289,7 +289,7 @@
                 <div class="control-group">
                     <label class="control-label">{{ _('Threshold') }}</label>
                     <div class="controls">
-                        <input type="number" class="input-mini text-right" id="settings_plugin_mqtt_publish_temperatureThreshold" data-bind="value: settings.publish.temperatureThreshold" />
+                        <input type="number" class="input-mini text-right" id="settings_plugin_OctoprintCloudSeniorProject_publish_temperatureThreshold" data-bind="value: settings.publish.temperatureThreshold" />
                         <span class="add-on">&deg;C</span>
                         <span class="help-block">{{ _('Threshold for temperature messages, no messages will be generated if the difference between the current and the last pushed temperature is less than this.') }}</span>
                     </div>
@@ -303,14 +303,14 @@
 
 
 
-        <div id="settings_plugin_mqtt_Subscription" class="tab-pane">
+        <div id="settings_plugin_OctoprintCloudSeniorProject_Subscription" class="tab-pane">
             <fieldset>
                 <legend>{{ _('Subscription topic') }}</legend>
                 <span class="help-block">{{ _('This section allows you to subscribe to a topic on an MQTT server to allow comamnds to be sent to your printer') }}</span>
                 <div class="control-group">
                     <label class="control-label">{{ _('Base topic') }}</label>
                     <div class="controls">
-                        <input type="text" class="input-large" id="settings_plugin_mqtt_publish_baseTopic" data-bind="textInput: settings.publish.baseTopic" />
+                        <input type="text" class="input-large" id="settings_plugin_OctoprintCloudSeniorProject_publish_baseTopic" data-bind="textInput: settings.publish.baseTopic" />
                         <span class="help-block">{{ _('Base topic under which to publish OctoPrint\'s messages') }}</span>
                     </div>
                 </div>
@@ -326,7 +326,7 @@
                     <div class="controls">
                         <div class="input-prepend">
                             <span class="add-on" data-bind="text: settings.publish.baseTopic"></span>
-                            <input type="text" class="input-large" id="settings_plugin_mqtt_subscribe_Topic" data-bind="value: settings.subscription.topic" />
+                            <input type="text" class="input-large" id="settings_plugin_OctoprintCloudSeniorProject_subscribe_Topic" data-bind="value: settings.subscription.topic" />
                         </div>
                         <span class="help-block">{{ _('Topic for recieving commands from mqtt') }}</span>
                     </div>
@@ -338,7 +338,7 @@
 
 
 
-        <div id="settings_plugin_mqtt_lastwill" class="tab-pane">
+        <div id="settings_plugin_OctoprintCloudSeniorProject_lastwill" class="tab-pane">
             <span class="help-block">{{ _('Enable this to get a <code>connected</code> message published to the topic on connect of the client, and a <code>disconnected</code> message on disconnect (via the broker\'s last will mechanism). See <a href="%(url)s" target="_blank", rel="noopener noreferrer">here</a> for more information on the Last Will concept in MQTT.', url="https://www.hivemq.com/blog/mqtt-essentials-part-9-last-will-and-testament") }}</span>
             <div class="control-group">
                 <div class="controls">
