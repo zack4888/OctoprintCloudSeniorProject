@@ -293,8 +293,8 @@ class MqttPlugin(octoprint.plugin.SettingsPlugin,
 
                 # version check: github repository
                 type="github_release",
-                user="OctoPrint",
-                repo="OctoPrint-MQTT",
+                user="zack4888",
+                repo="OctoprintCloudSeniorProject",
                 current=self._plugin_version,
 
                 # update method: pip
